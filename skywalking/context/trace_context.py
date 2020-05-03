@@ -40,7 +40,7 @@ class AbstractTracerContext(ABC):
     def active_span(self):
         pass
 
-    def stop_span(self):
+    def stop_span(self, span):
         pass
 
     def await_finish_async(self):
@@ -173,8 +173,9 @@ class TracingContext(AbstractTracerContext):
 
     def active_span(self):
         span = self.peek()
-        if not span:
+        if span is None:
             raise SkywalkingException("No active span.")
+        return span
 
     def peek(self):
         if self.spans:
@@ -197,18 +198,16 @@ class TracingContext(AbstractTracerContext):
             self.spans.pop()
 
         else:
-            raise SkywalkingException("Stopping the unexpected span = " + span)
+            raise SkywalkingException("Stopping the unexpected span = " + str(span.type))
         self.finish()
         return len(self.spans) == 0
 
     def finish(self):
         if len(self.spans) == 0:
-            pass
+            print("finish")
+            return
 
         print("not finish!")
-
-
-
 
 
 class IgnoredTracerContext(AbstractTracerContext):

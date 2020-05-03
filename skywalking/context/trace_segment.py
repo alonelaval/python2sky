@@ -9,7 +9,7 @@ class TraceSegment:
     def __init__(self):
         self.application_instance_id = config.SERVICE_INSTANCE_ID
         self.service_id = config.SERVICE_ID
-        self.trace_segment_id = None
+        self.trace_segment_id = global_id_generator(self.application_instance_id)
         self.refs = []
         self.spans = []
         self.create_time = current_milli_time()
@@ -21,7 +21,7 @@ class TraceSegment:
             self.refs.append(context_carrier)
 
     def related_global_traces(self, trace_id):
-        if len(self.trace_ids) > 0 and self.id == self.trace_ids.index(0):
+        if len(self.trace_ids) > 0 and self.id == self.trace_ids[0]:
             self.trace_ids.remove(self.id)
 
         if trace_id not in self.trace_ids:

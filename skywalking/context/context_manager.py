@@ -9,26 +9,35 @@ from skywalking.context.trace_context import IgnoredTracerContext, TracingContex
 from skywalking.exception.exceptions import SkywalkingException
 from skywalking.util import string_util
 
-log = logging.Logger.getLogger(__name__)
+log = logging.Logger(__name__)
 
 
 class ContextManager:
     CONTEXT = threading.local()
-    RUNTIME_CONTEXT = threading.local()
+
+    @classmethod
+    def set_tracing_context(cls, tracing_context):
+        ContextManager.CONTEXT.trace_context = tracing_context
+
+    @classmethod
+    def set_runtime_context(cls, runtime_context):
+        ContextManager.CONTEXT.runtime = runtime_context
+
+
 
     @classmethod
     def get_or_create(cls, operation_name, force_sampling):
-        tracing_context = ContextManager.CONTEXT.trace_context
-        if tracing_context:
+        if not hasattr(ContextManager.CONTEXT, "trace_context"):
             if not operation_name:
                 log.debug("No operation name, ignore this trace.")
                 tracing_context = IgnoredTracerContext()
             else:
-                if not null_value(config.SERVCIE_ID) and not null_value(config.SERVICE_INSTANCE_ID):
+                if not null_value(config.SERVICE_ID) and not null_value(config.SERVICE_INSTANCE_ID):
                     tracing_context = ContextManager.create_trace_context(operation_name, force_sampling)
                 else:
                     tracing_context = IgnoredTracerContext()
-
+        else:
+            tracing_context = ContextManager.CONTEXT.trace_context
         ContextManager.CONTEXT.trace_context = tracing_context
         return tracing_context
 
@@ -108,14 +117,13 @@ class ContextManager:
         ContextManager.__stop_span(tracing_context.active_span(), tracing_context)
 
     @classmethod
-    def stop_span(cls,span):
-        ContextManager.__stop_span(span,ContextManager.get_tracing_context())
+    def stop_span(cls, span):
+        ContextManager.__stop_span(span, ContextManager.get_tracing_context())
 
     @classmethod
     def __stop_span(cls, span, tracing_context):
         if tracing_context.stop_span(span):
             ContextManager.CONTEXT.__dict__.clear()
-            ContextManager.RUNTIME_CONTEXT.__dict__.clear()
 
     @classmethod
     def get_tracing_context(cls):
@@ -123,7 +131,7 @@ class ContextManager:
 
     @classmethod
     def get_run_time_context(cls):
-        return ContextManager.RUNTIME_CONTEXT
+        return ContextManager.CONTEXT.runtime
 
     @classmethod
     def create_trace_context(cls, operation_name, force_sampling):

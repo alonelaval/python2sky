@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # author：huawei
-from skywalking.context.context_carrier import ContextCarrier
+
 from skywalking.context.span import Span
 from skywalking.exception.exceptions import SkywalkingException
 from skywalking.proto.common.trace_common_pb2 import Entry, Unknown
@@ -9,21 +9,12 @@ from tests.base_test_case import BaseTestCase
 
 class TestSpan(BaseTestCase):
     def setUp(self):
-        self.context_carrier = ContextCarrier()
-        self.context_carrier.trace_segment_id = [1, 2, 3]
-        self.context_carrier.trace_id = [3, 4, 5]
-        self.context_carrier.span_id = 4
-        self.context_carrier.entry_service_instance_id = 1
-        self.context_carrier.parent_service_instance_id = 1
-        self.context_carrier.peer_host = "127.0.0.1:8080"
-        self.context_carrier.entry_endpoint_name = "/portal"
-        self.context_carrier.parent_endpoint_id = 123
-
+        super().setUp()
         self.span = Span()
         self.span.operation_name = "operation"
         self.span.log(SkywalkingException("test"))
         self.span.operation_id = 1
-        self.span.ref(ContextCarrier)
+        self.span.ref(self.context_carrier)
         self.span.parent_span_id = -1
         self.span.start_time = 11111
         self.span.end_time = 11111
