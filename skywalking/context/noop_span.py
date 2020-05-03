@@ -2,3 +2,5 @@
 # author：huawei
 
 
+class NoopSpan:
+    pass

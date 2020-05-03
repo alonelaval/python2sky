@@ -6,6 +6,7 @@ from skywalking.context.context_carrier import ContextCarrier
 
 SW6 = "1-My40LjU=-MS4yLjM=-4-1-1-IzEyNy4wLjAuMTo4MDgw-Iy9wb3J0YWw=-MTIz"
 
+
 class TestContextCarrier(unittest.TestCase):
     def setUp(self):
         self.context_carrier = ContextCarrier()
