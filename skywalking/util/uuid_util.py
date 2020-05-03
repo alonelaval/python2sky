@@ -13,7 +13,7 @@ def get_uuid():
 
 
 def global_id_generator(instance_id):
-    return [instance_id, current_milli_time(), random.getrandbits(64)]
+    return [str(instance_id), str(current_milli_time()), str(random.getrandbits(64))]
 
 
 def global_id_to_string(ids):

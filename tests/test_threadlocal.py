@@ -7,23 +7,23 @@ local = threading.local()
 
 
 class TestService:
-
     def do(self):
-        print(local.skywalking)
+        return local.skywalking == "dddd"
 
 
 class TestController:
     def post(self):
         local.skywalking = "dddd"
-        TestService().do()
+        return TestService().do()
 
 
 class TestTreadLocal(unittest.TestCase):
     def setUp(self):
-        pass
+        local.test = 100
 
     def setDown(self):
         pass
 
     def test_thread_local(self):
-        TestController().post()
+        self.assertEqual(TestController().post(), True)
+        self.assertEqual(local.test, 100)

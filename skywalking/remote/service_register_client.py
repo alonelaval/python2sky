@@ -3,6 +3,8 @@
 import threading
 import time
 import grpc
+
+from skywalking import config
 from skywalking.proto.register.InstancePing_pb2 import ServiceInstancePingPkg
 from skywalking.proto.register.InstancePing_pb2_grpc import ServiceInstancePingStub
 from skywalking.proto.register.Register_pb2 import Service, Services, ServiceInstance, ServiceInstances
@@ -14,6 +16,8 @@ from skywalking.util.common import build_key_value
 import logging
 
 INTERVAL = 30
+
+log = logging.Logger.getLogger(__name__)
 
 
 class RegisterClient(threading.Thread):
@@ -47,8 +51,8 @@ class RegisterClient(threading.Thread):
 
                 time.sleep(INTERVAL)
             except Exception as e:
-                logging.exception("register execute fail will be Selected collector grpc service running, reconnect:{}."
-                                  , self.server, e)
+                log.exception("register execute fail will be Selected collector grpc service running, reconnect:{}."
+                              , self.server, e)
                 time.sleep(INTERVAL)
                 self.connection()
 
@@ -58,15 +62,17 @@ class RegisterClient(threading.Thread):
             self.register_stub = RegisterStub(self.channel)
             self.ping_stub = ServiceInstancePingStub(self.channel)
         except Exception as e:
-            logging.exception("Create channel to {} fail.", self.server, e)
+            log.exception("Create channel to {} fail.", self.server, e)
 
     def set_service_instance_id(self, service_instance_register_mapping):
         if service_instance_register_mapping and len(service_instance_register_mapping.serviceInstances) > 0:
             self.service_instance_id = service_instance_register_mapping.serviceInstances[0].value
+            config.SERVICE_ID = self.service_instance_id
 
     def set_service_id(self, service_register_mapping):
         if service_register_mapping and len(service_register_mapping.services) > 0:
             self.service_id = service_register_mapping.services[0].value
+            config.SERVICE_ID = self.service_id
 
     def register_service(self):
         service = Service()
@@ -100,9 +106,6 @@ class RegisterClient(threading.Thread):
         ping.time = current_milli_time()
         ping.serviceInstanceUUID = instance_uuid
         return self.ping_stub.doPing(ping)
-
-
-
 
 
 if __name__ == "__main__":

@@ -24,6 +24,9 @@ class Span:
         self.refs = None
         self.type = None
         self.layer = None
+        self.peer = None
+        self.peer_id = None
+        self.error_occurred = False
 
     def is_entry(self):
         return self.type == Entry
@@ -45,7 +48,7 @@ class Span:
         self.end_time = current_milli_time()
         return self
 
-    def ref(self,context_carrrier):
+    def ref(self, context_carrrier):
         if not self.refs:
             self.refs = []
         if context_carrrier not in self.refs:
@@ -54,6 +57,7 @@ class Span:
     def log(self, ex):
         if not self.logs:
             self.logs = []
+        self.error_occurred = True
         log = Log()
         log.time = current_milli_time()
         log.data.append(build_key_value("event", "error"))
