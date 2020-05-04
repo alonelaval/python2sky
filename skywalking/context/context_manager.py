@@ -34,6 +34,7 @@ class ContextManager:
                 if not null_value(config.SERVICE_ID) and not null_value(config.SERVICE_INSTANCE_ID):
                     tracing_context = ContextManager.create_trace_context(operation_name, force_sampling)
                 else:
+                    log.info("service not register skywalking server!")
                     tracing_context = IgnoredTracerContext()
         else:
             tracing_context = ContextManager.CONTEXT.trace_context

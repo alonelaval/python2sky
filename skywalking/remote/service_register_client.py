@@ -15,19 +15,18 @@ from skywalking.util.uuid_util import get_uuid
 from skywalking.util.common import build_key_value
 import logging
 
-INTERVAL = 30
+INTERVAL = 5
 
-log = logging.Logger.getLogger(__name__)
+log = logging.getLogger(__name__)
 
 
 class RegisterClient(threading.Thread):
-    def __init__(self, ip, port, service_name, agent_version):
+    def __init__(self):
         threading.Thread.__init__(self)
-        self.ip = ip
-        self.port = port
-        self.service_name = service_name
-        self.agent_version = agent_version
-        self.server = "{0}:{1}".format(ip, port)
+
+        self.service_name = config.SERVICE_NAME
+        self.agent_version = config.AGENT_VERSION
+        self.server = config.BACKEND_SERVICE
         self.service_id = None
         self.service_instance_id = None
         self.uuid = get_uuid()
@@ -48,7 +47,6 @@ class RegisterClient(threading.Thread):
                     self.set_service_instance_id(service_instance_register_mapping)
                 else:
                     self.instance_ping(self.service_instance_id, self.uuid)
-
                 time.sleep(INTERVAL)
             except Exception as e:
                 log.exception("register execute fail will be Selected collector grpc service running, reconnect:{}."
@@ -58,6 +56,7 @@ class RegisterClient(threading.Thread):
 
     def connection(self):
         try:
+
             self.channel = grpc.insecure_channel(self.server)
             self.register_stub = RegisterStub(self.channel)
             self.ping_stub = ServiceInstancePingStub(self.channel)
@@ -67,7 +66,7 @@ class RegisterClient(threading.Thread):
     def set_service_instance_id(self, service_instance_register_mapping):
         if service_instance_register_mapping and len(service_instance_register_mapping.serviceInstances) > 0:
             self.service_instance_id = service_instance_register_mapping.serviceInstances[0].value
-            config.SERVICE_ID = self.service_instance_id
+            config.SERVICE_INSTANCE_ID = self.service_instance_id
 
     def set_service_id(self, service_register_mapping):
         if service_register_mapping and len(service_register_mapping.services) > 0:
@@ -108,8 +107,15 @@ class RegisterClient(threading.Thread):
         return self.ping_stub.doPing(ping)
 
 
+__register = RegisterClient()
+
+
+def get_service_register():
+    return __register
+
+
 if __name__ == "__main__":
-    register = RegisterClient("127.0.0.1", "11800", "huawei", "v1")
+    register = RegisterClient()
     # register.start()
     # serviceRegisterMapping = register_service()
     # service_id = serviceRegisterMapping.services[0].value

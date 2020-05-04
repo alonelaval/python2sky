@@ -91,4 +91,4 @@ def end_time_duration_to_second_time_bucket(date_str, step="SECOND"):
 
 
 def current_milli_time():
-    return int(round(time.time() * 1000));
+    return int(round(time.time() * 1000))

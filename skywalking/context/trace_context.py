@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
+import threading
+
 from skywalking.context.context_carrier import ContextCarrier
 from skywalking.context.noop_span import NoopSpan
 from skywalking.context.span import Span
@@ -257,6 +259,7 @@ class TracingContext(AbstractTracerContext):
 
     def finish(self):
         if len(self.spans) == 0:
+            ListenerManager.notify_finish(self.segment)
             print("finish")
             return
 
@@ -265,3 +268,23 @@ class TracingContext(AbstractTracerContext):
 
 class IgnoredTracerContext(AbstractTracerContext):
     pass
+
+
+class ListenerManager:
+    __LISTENERS = []
+    __lock = threading.Lock()
+
+    @classmethod
+    def notify_finish(cls, trace_segment):
+        for listener in ListenerManager.__LISTENERS:
+            listener.after_finished(trace_segment)
+
+    @classmethod
+    def add(cls, listener):
+        with ListenerManager.__lock:
+            ListenerManager.__LISTENERS.append(listener)
+
+    @classmethod
+    def remove(cls, listener):
+        with ListenerManager.__lock:
+            ListenerManager.__LISTENERS.remove(listener)

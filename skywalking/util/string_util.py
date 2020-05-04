@@ -8,6 +8,6 @@ def cut(operation_name, threshold):
 
 
 def is_empty(string):
-    if string is None and string == "":
+    if string is None or string == "":
         return True
     return False

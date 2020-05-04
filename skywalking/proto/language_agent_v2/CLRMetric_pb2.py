@@ -11,8 +11,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from common import common_pb2 as common_dot_common__pb2
-from common import CLR_pb2 as common_dot_CLR__pb2
+from skywalking.proto.common import common_pb2 as common_dot_common__pb2
+from skywalking.proto.common import CLR_pb2 as common_dot_CLR__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

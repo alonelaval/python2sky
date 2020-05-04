@@ -3,9 +3,10 @@
 import traceback
 
 from skywalking.proto.common.trace_common_pb2 import Entry, Exit
-from skywalking.util.common import build_key_value
-from skywalking.proto.language_agent_v2.trace_pb2 import Log
+from skywalking.util.common import build_key_value, null_value
+from skywalking.proto.language_agent_v2.trace_pb2 import Log, SpanObjectV2
 from skywalking.util.date_util import current_milli_time
+from skywalking.util.string_util import is_empty
 
 
 class Span:
@@ -20,7 +21,7 @@ class Span:
         self.end_time = None
         self.error_occurred = False
         self.component_id = 0
-        self.component_name = None
+        self.component_name = ""
         self.refs = None
         self.type = None
         self.layer = None
@@ -66,3 +67,48 @@ class Span:
         log.data.append(build_key_value("stack", traceback.format_exc()))
         self.logs.append(log)
         return self
+
+    def transform(self):
+        span_object_v2 = SpanObjectV2()
+        span_object_v2.spanId = self.span_id
+        span_object_v2.parentSpanId = self.parent_span_id
+        span_object_v2.startTime = self.start_time
+        span_object_v2.endTime = self.end_time
+        if not null_value(self.operation_id):
+            span_object_v2.operationNameId = self.operation_id
+        else:
+            span_object_v2.operationName = self.operation_name
+
+        span_object_v2.spanType = self.type
+
+        if self.layer is not None:
+            span_object_v2.spanLayer = self.layer
+
+        if not null_value(self.component_id):
+            span_object_v2.componentId = self.component_id
+        else:
+            if not is_empty(self.component_name):
+                span_object_v2.component = self.component_name
+
+        span_object_v2.isError = self.error_occurred
+
+        if self.tags:
+            for tag in self.tags:
+                span_object_v2.tags.append(tag)
+
+        if self.logs:
+            for log in self.logs:
+                span_object_v2.logs.append(log)
+
+        if self.refs:
+            for ref in self.refs:
+                span_object_v2.refs.append(ref.transform())
+
+        if not null_value(self.peer_id):
+            span_object_v2.peerId = self.peer_id
+        else:
+            if not is_empty(self.peer):
+                print("peer+"+self.peer)
+                span_object_v2.peer = self.peer
+
+        return span_object_v2
