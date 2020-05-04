@@ -60,8 +60,6 @@ class TestTracingContext(BaseTestCase):
         local_span = ContextManager.create_local_span("/local")
         exit_span = ContextManager.create_inject_exit_span("/exit", "172.1.1.1", carrier)
 
-        tracing_context = ContextManager.get_tracing_context()
-
         sw6 = carrier.serialize()
         self.assertIsNotNone(sw6)
 
@@ -79,8 +77,6 @@ class TestTracingContext(BaseTestCase):
         local_span = ContextManager.create_local_span("/local")
         carrier2 = ContextCarrier()
         exit_span = ContextManager.create_inject_exit_span("/exit", "172.1.1.1", carrier2)
-
-        tracing_context = ContextManager.get_tracing_context()
 
         sw6 = carrier.serialize()
         self.assertEqual(sw6, carrier.serialize())

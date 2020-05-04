@@ -1,8 +1,12 @@
 # -*- coding:utf-8 -*-
 # author：huawei
+import logging
 import unittest
 
 from skywalking.context.context_carrier import ContextCarrier
+
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
+logging.basicConfig( level=logging.DEBUG, format=LOG_FORMAT)
 
 
 class BaseTestCase(unittest.TestCase):
@@ -14,7 +18,7 @@ class BaseTestCase(unittest.TestCase):
         self.context_carrier.span_id = 4
         self.context_carrier.entry_service_instance_id = 1
         self.context_carrier.parent_service_instance_id = 1
-        self.context_carrier.peer_host = "127.0.0.1:8080"
+        self.context_carrier.peer = "127.0.0.1:8080"
         self.context_carrier.entry_endpoint_name = "/portal"
         self.context_carrier.parent_endpoint_id = 123
 

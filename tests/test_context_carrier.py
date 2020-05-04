@@ -14,4 +14,4 @@ class TestContextCarrier(BaseTestCase):
         text = self.SW6
         context = ContextCarrier()
         context.deserialize(text)
-        self.assertEqual(context.peer_host, self.context_carrier.peer_host)
+        self.assertEqual(context.peer, self.context_carrier.peer)
