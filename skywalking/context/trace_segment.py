@@ -14,7 +14,7 @@ class TraceSegment:
         self.spans = []
         self.create_time = current_milli_time()
         self.id = global_id_generator(self.application_instance_id)
-        self.trace_ids = [id]
+        self.trace_ids = [self.id]
 
     def ref(self, context_carrier):
         if context_carrier not in self.refs:

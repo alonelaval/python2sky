@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae6d4b-9939-4455-bd9d-242688646a0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skywalking/util/count_down_latch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_segment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_tracing_context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skywalking/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skywalking/context/context_carrier.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/context/context_carrier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skywalking/context/context_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/context/context_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skywalking/context/span.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/context/span.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skywalking/context/trace_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/context/trace_context.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skywalking/context/trace_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/context/trace_segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/base_test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/base_test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_context_carrier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_context_carrier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_span.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_span.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skywalking/util/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/util/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skywalking/util/string_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/skywalking/util/string_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_tracing_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_tracing_context.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
       <recent name="$PROJECT_DIR$/skywalking/util" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract">
+  <component name="RunManager" selected="Python tests.Unittests for test_tracing_context.TestTracingContext.test_async2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -103,21 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unittests for test_context_carrier.TestContextCarrier.test_deserialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="skywalking-client-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_context_carrier.TestContextCarrier.test_deserialize&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for test_context_carrier.TestContextCarrier.test_serialize" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="skywalking-client-python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,21 +114,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_context_carrier.TestContextCarrier.test_serialize&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_tracing_context.TestTracingContext" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="skywalking-client-python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_tracing_context.TestTracingContext&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -178,13 +147,43 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="skywalking-client-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_tracing_context.TestTracingContext.test_tracing_context_inject&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject_and_extract" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="skywalking-client-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_tracing_context.TestTracingContext.test_tracing_context_inject_and_extract&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract" />
-        <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext" />
         <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext.test_async2" />
+        <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject_and_extract" />
+        <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject" />
+        <item itemvalue="Python tests.Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract" />
         <item itemvalue="Python tests.Unittests for test_context_carrier.TestContextCarrier.test_serialize" />
-        <item itemvalue="Python tests.Unittests for test_context_carrier.TestContextCarrier.test_deserialize" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +200,8 @@
       <workItem from="1588335781147" duration="328000" />
       <workItem from="1588336160032" duration="22435000" />
       <workItem from="1588403158945" duration="12431000" />
-      <workItem from="1588422862983" duration="39167000" />
+      <workItem from="1588422862983" duration="45257000" />
+      <workItem from="1588558518298" duration="2888000" />
     </task>
     <servers />
   </component>
@@ -229,38 +229,38 @@
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
     <state x="400" y="563" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.2511.1440@0.0.2511.1440" timestamp="1588491234039" />
-    <state width="1354" height="650" key="GridCell.Tab.0.bottom" timestamp="1588511013287">
+    <state width="1237" height="378" key="GridCell.Tab.0.bottom" timestamp="1588561445191">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="650" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588511013287" />
-    <state width="1354" height="650" key="GridCell.Tab.0.center" timestamp="1588511013286">
+    <state width="1237" height="378" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445191" />
+    <state width="1237" height="378" key="GridCell.Tab.0.center" timestamp="1588561445191">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="650" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588511013286" />
-    <state width="1354" height="650" key="GridCell.Tab.0.left" timestamp="1588511013285">
+    <state width="1237" height="378" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445191" />
+    <state width="1237" height="378" key="GridCell.Tab.0.left" timestamp="1588561445190">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="650" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588511013285" />
-    <state width="1354" height="650" key="GridCell.Tab.0.right" timestamp="1588511013286">
+    <state width="1237" height="378" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445190" />
+    <state width="1237" height="378" key="GridCell.Tab.0.right" timestamp="1588561445191">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="650" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588511013286" />
-    <state width="1354" height="383" key="GridCell.Tab.1.bottom" timestamp="1588510825687">
+    <state width="1237" height="378" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445191" />
+    <state width="1237" height="378" key="GridCell.Tab.1.bottom" timestamp="1588561445114">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="383" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588510825687" />
-    <state width="1354" height="383" key="GridCell.Tab.1.center" timestamp="1588510825687">
+    <state width="1237" height="378" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445114" />
+    <state width="1237" height="378" key="GridCell.Tab.1.center" timestamp="1588561445113">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="383" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588510825687" />
-    <state width="1354" height="383" key="GridCell.Tab.1.left" timestamp="1588510825686">
+    <state width="1237" height="378" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445113" />
+    <state width="1237" height="378" key="GridCell.Tab.1.left" timestamp="1588561445113">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="383" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588510825686" />
-    <state width="1354" height="383" key="GridCell.Tab.1.right" timestamp="1588510825687">
+    <state width="1237" height="378" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445113" />
+    <state width="1237" height="378" key="GridCell.Tab.1.right" timestamp="1588561445113">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1354" height="383" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588510825687" />
+    <state width="1237" height="378" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588561445113" />
     <state x="818" y="368" key="SettingsEditor" timestamp="1588336174537">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
@@ -274,29 +274,14 @@
     </state>
     <state x="807" y="624" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.2511.1440@0.0.2511.1440" timestamp="1588400802877" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_tracing_context.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/skywalking/context/trace_segment.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_list_TestList_test_list.coverage" NAME="Unittests for test_list.TestList.test_list Coverage Results" MODIFIED="1588488470354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_async2.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_async2 Coverage Results" MODIFIED="1588510272740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_async2.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_async2 Coverage Results" MODIFIED="1588561445080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_in_test_threadlocal_py.coverage" NAME="Unittests in test_threadlocal.py Coverage Results" MODIFIED="1588478089087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext.coverage" NAME="Unittests for test_tracing_context.TestTracingContext Coverage Results" MODIFIED="1588510671954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier Coverage Results" MODIFIED="1588501071866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_segment_TestTraceSegment_test_segment.coverage" NAME="Unittests for test_segment.TestTraceSegment.test_segment Coverage Results" MODIFIED="1588502949899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context_inject.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject Coverage Results" MODIFIED="1588519781976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$base64_util.coverage" NAME="base64_util Coverage Results" MODIFIED="1588409771027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/util" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_in_test_context_carrier_py.coverage" NAME="Unittests in test_context_carrier.py Coverage Results" MODIFIED="1588409042529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_segment_TestTrace_segment_test_span.coverage" NAME="Unittests for test_segment.TestTrace_segment.test_span Coverage Results" MODIFIED="1588501034558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -308,13 +293,14 @@
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_config_TestConfig_testConfig.coverage" NAME="Unittests for test_config.TestConfig.testConfig Coverage Results" MODIFIED="1588487755817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_ignored_segment.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_ignored_segment Coverage Results" MODIFIED="1588505372095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_async.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_async Coverage Results" MODIFIED="1588506751736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context_inject_and_extract.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_inject_and_extract Coverage Results" MODIFIED="1588520406339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$os_util.coverage" NAME="os_util Coverage Results" MODIFIED="1588381916501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/util" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$service_register_client__1_.coverage" NAME="service_register_client (1) Coverage Results" MODIFIED="1588401312894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/remote" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$service_register_client.coverage" NAME="service_register_client Coverage Results" MODIFIED="1588394855458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/register" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_in_test_segment_py.coverage" NAME="Unittests in test_segment.py Coverage Results" MODIFIED="1588504376546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_deserialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_deserialize Coverage Results" MODIFIED="1588508914249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_serialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_serialize Coverage Results" MODIFIED="1588508951477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context_extract.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract Coverage Results" MODIFIED="1588510824969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_deserialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_deserialize Coverage Results" MODIFIED="1588512357060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_serialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_serialize Coverage Results" MODIFIED="1588512362982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context_extract.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract Coverage Results" MODIFIED="1588512474058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$uuid_util.coverage" NAME="uuid_util Coverage Results" MODIFIED="1588384108867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/util" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$context_carrier.coverage" NAME="context_carrier Coverage Results" MODIFIED="1588409953308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/context" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context Coverage Results" MODIFIED="1588505412792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

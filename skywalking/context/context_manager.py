@@ -4,10 +4,11 @@ import logging
 import threading
 
 from skywalking import config
-from skywalking.config import null_value, OPERATION_NAME_THRESHOLD
+from skywalking.config import OPERATION_NAME_THRESHOLD
 from skywalking.context.trace_context import IgnoredTracerContext, TracingContext
 from skywalking.exception.exceptions import SkywalkingException
 from skywalking.util import string_util
+from skywalking.util.common import null_value
 
 log = logging.Logger(__name__)
 
@@ -22,8 +23,6 @@ class ContextManager:
     @classmethod
     def set_runtime_context(cls, runtime_context):
         ContextManager.CONTEXT.runtime = runtime_context
-
-
 
     @classmethod
     def get_or_create(cls, operation_name, force_sampling):
@@ -45,7 +44,7 @@ class ContextManager:
     def get_global_trace_id(cls):
         tracing_context = ContextManager.get_tracing_context()
         if tracing_context:
-            tracing_context.get_readable_global_trace_id()
+            return tracing_context.get_readable_global_trace_id()
         else:
             return "N/A"
 
@@ -67,7 +66,7 @@ class ContextManager:
         return local_span
 
     @classmethod
-    def create_inject_exit_span(cls, operation_name, context_carrier, remote_peer):
+    def create_inject_exit_span(cls, operation_name, remote_peer, context_carrier):
         if not context_carrier:
             raise SkywalkingException("ContextCarrier can't be null.")
         operation_name = string_util.cut(operation_name, OPERATION_NAME_THRESHOLD)
@@ -127,11 +126,15 @@ class ContextManager:
 
     @classmethod
     def get_tracing_context(cls):
-        return ContextManager.CONTEXT.trace_context
+        if hasattr(ContextManager.CONTEXT,"trace_context"):
+            return ContextManager.CONTEXT.trace_context
+        return None
 
     @classmethod
     def get_run_time_context(cls):
-        return ContextManager.CONTEXT.runtime
+        if hasattr(ContextManager.CONTEXT, "runtime"):
+            return ContextManager.CONTEXT.runtime
+        return None
 
     @classmethod
     def create_trace_context(cls, operation_name, force_sampling):

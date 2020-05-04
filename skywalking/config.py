@@ -14,7 +14,3 @@ IGNORE_SUFFIX = []
 
 OPERATION_NAME_THRESHOLD = 500
 
-def null_value(id):
-    if id == 0:
-        return True
-    return False

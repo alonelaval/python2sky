@@ -48,11 +48,11 @@ class Span:
         self.end_time = current_milli_time()
         return self
 
-    def ref(self, context_carrrier):
+    def ref(self, context_carrier):
         if not self.refs:
             self.refs = []
-        if context_carrrier not in self.refs:
-            self.refs.append(context_carrrier)
+        if context_carrier not in self.refs:
+            self.refs.append(context_carrier)
 
     def log(self, ex):
         if not self.logs:

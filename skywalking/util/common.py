@@ -8,3 +8,9 @@ def build_key_value(key, value):
     pro.key = key
     pro.value = str(value)
     return pro
+
+
+def null_value(id):
+    if id == 0 or id is None:
+        return True
+    return False
