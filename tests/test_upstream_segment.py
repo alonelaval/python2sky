@@ -14,8 +14,7 @@ from tests.base_test_case import BaseTestCase
 class Trace_segment_client(BaseTestCase):
     def test(self):
 
-        print(sys.path)
-        py = "ChEKDzXcjvP8nS6Ap7Dh7YWcHBJAChEKDzXbjvP8nS6g7LDh7YWcHBInCAEQ////////////ARjcjvP8nS4g3I7z/J0uOgovb3BlcmF0aW9uGAMgNQ=="
+        py = "ChEKDxLl3fWSni7W8fSNppOcHBI3ChEKDxLl3fWSni6A2/KNppOcHBIeCAEQ////////////ARjl3fWSni4g5d31kp4uOgEvGAMgEg=="
 
         java = "CgwKCiA8k9qD3eKFnBwSbwoMCgogPJLag93ihZwcElsQ////////////ARjhhOH8nS4g44Th/J0uMARYA2AOeiYKA3VybBIfaHR0cDovLzEyNy4wLjAuMTo4MDg4L3Byb2plY3QvYnoSCgtodHRwLm1ldGhvZBIDR0VUGAUgIA=="
         py_up_seg = UpstreamSegment()
@@ -31,12 +30,12 @@ class Trace_segment_client(BaseTestCase):
         # client = get_trace_segment_client()
         # client.after_finished(java_up_seg)
 
-        def stream():
-            for i in [java_up_seg,py_up_seg]:
-                yield i
-
-        result = self.__test2(stream())
-        print(result.__next__())
+        # def stream():
+        #     for i in [java_up_seg,py_up_seg]:
+        #         yield i
+        #
+        # result = self.__test2(stream())
+        # print(result.__next__())
 
         # trace_segment_stub.collect(java_up_seg, timeout=1000)
 

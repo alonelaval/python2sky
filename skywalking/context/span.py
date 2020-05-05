@@ -9,6 +9,7 @@ from skywalking.util.date_util import current_milli_time
 from skywalking.util.string_util import is_empty
 
 
+
 class Span:
     def __init__(self):
         self.span_id = -1
@@ -108,7 +109,6 @@ class Span:
             span_object_v2.peerId = self.peer_id
         else:
             if not is_empty(self.peer):
-                print("peer+"+self.peer)
                 span_object_v2.peer = self.peer
 
         return span_object_v2

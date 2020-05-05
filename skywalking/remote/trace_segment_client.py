@@ -47,8 +47,8 @@ class TraceSegmentClient(threading.Thread):
                     for seg in [trace_segment]:
                         yield seg.transform()
 
-                response = self.trace_segment_stub.collect(iter_data())
-                print(response)
+                self.trace_segment_stub.collect(iter_data())
+
             except Exception as e:
                 log.exception("Transform and send UpstreamSegment to collector fail.{}.", self.server, e)
                 time.sleep(INTERVAL)

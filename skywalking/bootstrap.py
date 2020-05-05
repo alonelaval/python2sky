@@ -3,7 +3,7 @@
 import logging
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
-logging.basicConfig( level=logging.DEBUG, format=LOG_FORMAT)
+logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT)
 
 def skywalking_boot():
     import skywalking.remote.service_register_client

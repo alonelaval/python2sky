@@ -214,8 +214,8 @@ class TracingContext(AbstractTracerContext):
 
     def __create_span(self, operation_name, span_type, parent_span_id):
         span = Span()
-        self.span_id_generator += 1
         span.span_id = self.span_id_generator
+        self.span_id_generator += 1
         span.parent_span_id = parent_span_id
         span.operation_name = operation_name
         span.type = span_type
