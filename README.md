@@ -119,7 +119,7 @@ def cross_thread():
         set_layer_http(exit_span)
         set_component(exit_span, REQUESTS)
         ContextManager.inject(exit_carrier)
-        data = requests.get("http://localhost:8088/project/b", headers={"sw6": exit_carrier.serialize()})
+        data = requests.get("http://localhost:8088/project/b", headers={SKYWALKING_HERADER_V2: exit_carrier.serialize()})
         set_tag_status_code(exit_span, data.status_code)
         ContextManager.stop_span(exit_span)
 

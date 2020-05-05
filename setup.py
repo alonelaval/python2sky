@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 packages = ['python2sky']
 
-requires =["grpcio==1.28.1","grpcio-tools==1.28.1"]
+install_requires =["grpcio==1.28.1","grpcio-tools==1.28.1"]
 
 test_requirements = [
     'pytest-httpbin==0.0.7',
@@ -22,7 +22,7 @@ test_requirements = [
 
 setup(
     name = "python2sky",
-    version = "0.1.1",
+    version = "0.1.3",
     keywords = ("skywalking","agent","skywalking aget","apm","trace","distributed trace"),
     description = "skywalking agent for python",
     long_description = "apm agent",
@@ -32,10 +32,10 @@ setup(
     author = "huawei",
     author_email = "120huawei@163.com",
 
-    packages = packages,
+
     include_package_data = True,
     platforms = "any",
-    install_requires = requires,
-
+    packages=find_packages(exclude=['tests', 'test.*']),
+    install_requires=install_requires
 
 )
