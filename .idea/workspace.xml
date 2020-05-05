@@ -2,85 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae6d4b-9939-4455-bd9d-242688646a0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/python2sky/util/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/bootstrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/bootstrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/constant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/context_carrier.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/context_carrier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/context_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/context_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/noop_span.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/noop_span.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/span.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/span.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/trace_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/trace_context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/context/trace_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/trace_segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/exception/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/exception/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/exception/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/exception/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/CLR.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/CLR.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/CLR_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/CLR_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/CLR_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/CLR_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/JVM.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/JVM.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/JVM_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/JVM_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/JVM_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/JVM_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/common.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/common.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/common_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/common_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/common_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/common_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/trace-common.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/trace-common.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/trace_common_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/trace_common_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/common/trace_common_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/common/trace_common_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/ApplicationRegisterService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/ApplicationRegisterService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/DiscoveryService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/DiscoveryService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/Downstream.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/Downstream.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/JVMMetricsService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/JVMMetricsService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/KeyWithIntegerValue.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/KeyWithIntegerValue.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/KeyWithStringValue.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/KeyWithStringValue.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/NetworkAddressRegisterService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/NetworkAddressRegisterService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language-agent/TraceSegmentService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/TraceSegmentService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/CLRMetric.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/CLRMetric.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/CLRMetric_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/CLRMetric_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/CLRMetric_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/CLRMetric_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/JVMMetric.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/JVMMetric.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/JVMMetric_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/JVMMetric_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/JVMMetric_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/JVMMetric_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/trace.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/trace.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/trace_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/trace_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/language_agent_v2/trace_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/language_agent_v2/trace_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/InstancePing.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/InstancePing.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/InstancePing_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/InstancePing_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/InstancePing_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/InstancePing_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/Register.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/Register.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/Register_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/Register_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/register/Register_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/register/Register_pb2_grpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/service-mesh-probe/istio/skywalking.config.pb.html" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/istio/skywalking.config.pb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/proto/service-mesh-probe/service-mesh.proto" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/service-mesh.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/remote/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/plugin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/remote/service_register_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/remote/service_register_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/remote/trace_segment_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/remote/trace_segment_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/remote/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/base64_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/base64_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/count_down_latch.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/count_down_latch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/date_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/date_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/os_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/os_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/string_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/string_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skywalking/util/uuid_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/util/uuid_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/base_test_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/base_test_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_context_carrier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_context_carrier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_span.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_span.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_trace_segment_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_trace_segment_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_tracing_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_tracing_context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_upstream_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upstream_segment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky.iml" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky/remote/service_register_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/remote/service_register_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky/remote/trace_segment_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/remote/trace_segment_client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +42,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/skywalking/proto/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -151,146 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="python2sky" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="python2sky" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="python2sky" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="python2sky" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="bootstrap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python2sky" />
@@ -336,19 +128,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -357,18 +136,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
@@ -425,46 +192,12 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.test_flask" />
+      <item itemvalue="Python.bootstrap" />
       <item itemvalue="Python tests.Unittests for test_trace_segment_client.Trace_segment_client.test_send" />
       <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client.test" />
       <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client" />
-      <item itemvalue="Python.bootstrap" />
     </list>
     <recent_temporary>
       <list>
@@ -491,7 +224,8 @@
       <workItem from="1588403158945" duration="12431000" />
       <workItem from="1588422862983" duration="45257000" />
       <workItem from="1588558518298" duration="34456000" />
-      <workItem from="1588599699983" duration="21421000" />
+      <workItem from="1588599699983" duration="21747000" />
+      <workItem from="1588668307724" duration="477000" />
     </task>
     <servers />
   </component>
@@ -535,38 +269,38 @@
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
     <state x="1085" y="558" key="EnvironmentVariablesDialog/0.0.2511.1440@0.0.2511.1440" timestamp="1588598264763" />
-    <state width="1540" height="366" key="GridCell.Tab.0.bottom" timestamp="1588667759897">
+    <state width="1346" height="366" key="GridCell.Tab.0.bottom" timestamp="1588668247722">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759897" />
-    <state width="1540" height="366" key="GridCell.Tab.0.center" timestamp="1588667759896">
+    <state width="1346" height="366" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247722" />
+    <state width="1346" height="366" key="GridCell.Tab.0.center" timestamp="1588668247722">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759896" />
-    <state width="1540" height="366" key="GridCell.Tab.0.left" timestamp="1588667759896">
+    <state width="1346" height="366" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247722" />
+    <state width="1346" height="366" key="GridCell.Tab.0.left" timestamp="1588668247721">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759896" />
-    <state width="1540" height="366" key="GridCell.Tab.0.right" timestamp="1588667759897">
+    <state width="1346" height="366" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247721" />
+    <state width="1346" height="366" key="GridCell.Tab.0.right" timestamp="1588668247722">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759897" />
-    <state width="1540" height="366" key="GridCell.Tab.1.bottom" timestamp="1588667759835">
+    <state width="1346" height="366" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247722" />
+    <state width="1346" height="366" key="GridCell.Tab.1.bottom" timestamp="1588668247723">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759835" />
-    <state width="1540" height="366" key="GridCell.Tab.1.center" timestamp="1588667759834">
+    <state width="1346" height="366" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
+    <state width="1346" height="366" key="GridCell.Tab.1.center" timestamp="1588668247723">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759834" />
-    <state width="1540" height="366" key="GridCell.Tab.1.left" timestamp="1588667759834">
+    <state width="1346" height="366" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
+    <state width="1346" height="366" key="GridCell.Tab.1.left" timestamp="1588668247722">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759834" />
-    <state width="1540" height="366" key="GridCell.Tab.1.right" timestamp="1588667759834">
+    <state width="1346" height="366" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247722" />
+    <state width="1346" height="366" key="GridCell.Tab.1.right" timestamp="1588668247723">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="366" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588667759834" />
+    <state width="1346" height="366" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
     <state x="818" y="368" key="SettingsEditor" timestamp="1588336174537">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
@@ -647,6 +381,7 @@
     <SUITE FILE_PATH="coverage/skywalking_client_python$bootstrap.coverage" NAME="bootstrap Coverage Results" MODIFIED="1588656764017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skyapm-python" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_serialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_serialize Coverage Results" MODIFIED="1588512362982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_context_carrier_TestContextCarrier_test_deserialize.coverage" NAME="Unittests for test_context_carrier.TestContextCarrier.test_deserialize Coverage Results" MODIFIED="1588565586366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/python2sky$test_flask.coverage" NAME="test_flask Coverage Results" MODIFIED="1588668336477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/falsk_test" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_tracing_context_extract.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_tracing_context_extract Coverage Results" MODIFIED="1588512474058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$uuid_util.coverage" NAME="uuid_util Coverage Results" MODIFIED="1588582527946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/util" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$context_carrier.coverage" NAME="context_carrier Coverage Results" MODIFIED="1588409953308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/context" />

@@ -11,7 +11,6 @@ from python2sky import config
 from python2sky.context.trace_context import ListenerManager
 from python2sky.proto.language_agent_v2.trace_pb2_grpc import TraceSegmentReportServiceStub
 
-INTERVAL = 30
 log = logging.getLogger(__name__)
 
 
@@ -30,7 +29,6 @@ class TraceSegmentClient(threading.Thread):
         self.connection()
         self.start()
 
-
     def run(self):
         while True:
             try:
@@ -46,7 +44,7 @@ class TraceSegmentClient(threading.Thread):
 
             except Exception as e:
                 log.exception("Transform and send UpstreamSegment to collector fail.{}.", self.server, e)
-                time.sleep(INTERVAL)
+                time.sleep(config.REGISTER_INTERVAL)
                 self.channel.close()
                 self.connection()
 

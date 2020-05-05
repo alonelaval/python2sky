@@ -15,7 +15,6 @@ from python2sky.util.uuid_util import get_uuid
 from python2sky.util.common import build_key_value
 import logging
 
-INTERVAL = 5
 
 log = logging.getLogger(__name__)
 
@@ -47,11 +46,11 @@ class RegisterClient(threading.Thread):
                     self.set_service_instance_id(service_instance_register_mapping)
                 else:
                     self.instance_ping(self.service_instance_id, self.uuid)
-                time.sleep(INTERVAL)
+                time.sleep(config.REGISTER_INTERVAL)
             except Exception as e:
                 log.exception("register execute fail will be Selected collector grpc service running, reconnect:{}."
                               , self.server, e)
-                time.sleep(INTERVAL)
+                time.sleep(config.REGISTER_INTERVAL)
                 self.connection()
 
     def connection(self):
