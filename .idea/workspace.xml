@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae6d4b-9939-4455-bd9d-242688646a0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/cross_process.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/cross_thread.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python2sky/constant.py" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,7 @@
       <workItem from="1588422862983" duration="45257000" />
       <workItem from="1588558518298" duration="34456000" />
       <workItem from="1588599699983" duration="21747000" />
-      <workItem from="1588668307724" duration="4133000" />
+      <workItem from="1588668307724" duration="5602000" />
     </task>
     <servers />
   </component>

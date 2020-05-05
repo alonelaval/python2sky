@@ -6,6 +6,7 @@ import requests
 from flask import Flask, request
 
 from python2sky.bootstrap import skywalking_boot
+from python2sky.config import SKYWALKING_HERADER_V2
 from python2sky.context.common import set_tag_url, set_tag_method, set_tag_status_code, set_layer_http, FLASK, \
     set_component, REQUESTS
 
@@ -37,7 +38,7 @@ def hello_world():
 
 @app.route('/flask/cross_process')
 def cross_process():
-    sw6 = request.headers.get("sw6")
+    sw6 = request.headers.get(SKYWALKING_HERADER_V2)
     req = request
     context_carrier = None
     if sw6 and sw6 != "":
@@ -56,7 +57,7 @@ def cross_process():
     exit_span = ContextManager.create_inject_exit_span("/project/b", exit_url, exit_carrier)
     set_layer_http(exit_span)
     set_component(exit_span, REQUESTS)
-    data = requests.get("http://localhost:8088/project/b", headers={"sw6": exit_carrier.serialize()})
+    data = requests.get("http://localhost:8088/project/b", headers={SKYWALKING_HERADER_V2: exit_carrier.serialize()})
     set_tag_status_code(exit_span, data.status_code)
 
     ContextManager.stop_span(exit_span)
