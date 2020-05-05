@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 # author：huawei
-from skywalking.proto.common.trace_common_pb2 import CrossProcess
-from skywalking.proto.language_agent_v2.trace_pb2 import SegmentReference
-from skywalking.util.common import null_value, build_unique_id
-from skywalking.util.string_util import is_empty
-from skywalking.util.uuid_util import global_id_to_string, string_to_global_id
-from skywalking.util.base64_util import encode, decode
+from python2sky.proto.common.trace_common_pb2 import CrossProcess
+from python2sky.proto.language_agent_v2.trace_pb2 import SegmentReference
+from python2sky.util.common import null_value, build_unique_id
+from python2sky.util.string_util import is_empty
+from python2sky.util.uuid_util import global_id_to_string, string_to_global_id
+from python2sky.util.base64_util import encode, decode
 
 
 def encode_compressed_field(id, text):
@@ -72,7 +72,7 @@ class ContextCarrier:
             if null_value(self.peer_id):
                 segment_reference.networkAddress = self.peer
             else:
-                segment_reference.networkAddress = self.peer_id
+                segment_reference.networkAddressId = self.peer_id
         else:
             segment_reference.refType = self.type
 

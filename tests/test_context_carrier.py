@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
 
-from skywalking.context.context_carrier import ContextCarrier
+from python2sky.context.context_carrier import ContextCarrier
 from tests.base_test_case import BaseTestCase
 
 

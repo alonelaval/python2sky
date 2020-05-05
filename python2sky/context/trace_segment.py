@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 # author：huawei
-from skywalking import config
-from skywalking.proto.common.trace_common_pb2 import UpstreamSegment
-from skywalking.proto.language_agent_v2.trace_pb2 import SegmentObject
-from skywalking.util.common import build_unique_id
-from skywalking.util.date_util import current_milli_time
-from skywalking.util.uuid_util import global_id_generator
+from python2sky import config
+from python2sky.proto.common.trace_common_pb2 import UpstreamSegment
+from python2sky.proto.language_agent_v2.trace_pb2 import SegmentObject
+from python2sky.util.common import build_unique_id
+from python2sky.util.date_util import current_milli_time
+from python2sky.util.uuid_util import global_id_generator
 
 
 class TraceSegment:

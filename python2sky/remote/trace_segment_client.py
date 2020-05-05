@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 # author：huawei
-import base64
 import logging
 import threading
 import time
@@ -8,9 +7,9 @@ from queue import Queue
 
 import grpc
 
-from skywalking import config
-from skywalking.context.trace_context import ListenerManager
-from skywalking.proto.language_agent_v2.trace_pb2_grpc import TraceSegmentReportServiceStub
+from python2sky import config
+from python2sky.context.trace_context import ListenerManager
+from python2sky.proto.language_agent_v2.trace_pb2_grpc import TraceSegmentReportServiceStub
 
 INTERVAL = 30
 log = logging.getLogger(__name__)
@@ -31,10 +30,6 @@ class TraceSegmentClient(threading.Thread):
         self.connection()
         self.start()
 
-    # def iter_queue(self):
-    #     sentinel = object()
-    #     for trace_segment in iter(self.queue.get, sentinel):
-    #         yield trace_segment.transform()
 
     def run(self):
         while True:

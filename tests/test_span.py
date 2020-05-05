@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 # author：huawei
 
-from skywalking.context.span import Span
-from skywalking.exception.exceptions import SkywalkingException
-from skywalking.proto.common.trace_common_pb2 import Entry, Unknown
+from python2sky.context.span import Span
+from python2sky.exception.exceptions import SkywalkingException
+from python2sky.proto.common.trace_common_pb2 import Entry, Unknown
 from tests.base_test_case import BaseTestCase
 
 

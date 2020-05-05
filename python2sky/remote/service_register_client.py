@@ -4,15 +4,15 @@ import threading
 import time
 import grpc
 
-from skywalking import config
-from skywalking.proto.register.InstancePing_pb2 import ServiceInstancePingPkg
-from skywalking.proto.register.InstancePing_pb2_grpc import ServiceInstancePingStub
-from skywalking.proto.register.Register_pb2 import Service, Services, ServiceInstance, ServiceInstances
-from skywalking.proto.register.Register_pb2_grpc import RegisterStub
-from skywalking.util.date_util import current_milli_time
-from skywalking.util.os_util import get_os_name, get_all_ipv4, get_host_name, get_process_no
-from skywalking.util.uuid_util import get_uuid
-from skywalking.util.common import build_key_value
+from python2sky import config
+from python2sky.proto.register.InstancePing_pb2 import ServiceInstancePingPkg
+from python2sky.proto.register.InstancePing_pb2_grpc import ServiceInstancePingStub
+from python2sky.proto.register.Register_pb2 import Service, Services, ServiceInstance, ServiceInstances
+from python2sky.proto.register.Register_pb2_grpc import RegisterStub
+from python2sky.util.date_util import current_milli_time
+from python2sky.util.os_util import get_os_name, get_all_ipv4, get_host_name, get_process_no
+from python2sky.util.uuid_util import get_uuid
+from python2sky.util.common import build_key_value
 import logging
 
 INTERVAL = 5

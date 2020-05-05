@@ -2,11 +2,11 @@
 # author：huawei
 import traceback
 
-from skywalking.proto.common.trace_common_pb2 import Entry, Exit
-from skywalking.util.common import build_key_value, null_value
-from skywalking.proto.language_agent_v2.trace_pb2 import Log, SpanObjectV2
-from skywalking.util.date_util import current_milli_time
-from skywalking.util.string_util import is_empty
+from python2sky.proto.common.trace_common_pb2 import Entry, Exit
+from python2sky.util.common import build_key_value, null_value
+from python2sky.proto.language_agent_v2.trace_pb2 import Log, SpanObjectV2
+from python2sky.util.date_util import current_milli_time
+from python2sky.util.string_util import is_empty
 
 
 

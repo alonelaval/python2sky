@@ -2,7 +2,7 @@
 # author：huawei
 import unittest
 
-from skywalking import config
+from python2sky import config
 
 
 class TestConfig(unittest.TestCase):

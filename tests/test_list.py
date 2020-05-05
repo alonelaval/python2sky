@@ -2,7 +2,7 @@
 # author：huawei
 import unittest
 
-from skywalking.util.uuid_util import global_id_generator, global_id_to_string, string_to_global_id
+from python2sky.util.uuid_util import global_id_generator, global_id_to_string, string_to_global_id
 
 
 class TestList(unittest.TestCase):

@@ -3,7 +3,7 @@
 import logging
 import unittest
 
-from skywalking.context.context_carrier import ContextCarrier
+from python2sky.context.context_carrier import ContextCarrier
 
 LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
 logging.basicConfig( level=logging.DEBUG, format=LOG_FORMAT)

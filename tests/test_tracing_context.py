@@ -3,11 +3,11 @@
 import time
 from threading import Thread
 
-from skywalking import config
-from skywalking.context.context_carrier import ContextCarrier
-from skywalking.context.context_manager import ContextManager
-from skywalking.util.count_down_latch import CountDownLatch
-from skywalking.util.uuid_util import global_id_to_string
+from python2sky import config
+from python2sky.context.context_carrier import ContextCarrier
+from python2sky.context.context_manager import ContextManager
+from python2sky.util.count_down_latch import CountDownLatch
+from python2sky.util.uuid_util import global_id_to_string
 from tests.base_test_case import BaseTestCase
 
 

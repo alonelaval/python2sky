@@ -1,20 +1,19 @@
 # -*- coding:utf-8 -*-
 # author：huawei
 import base64
-import sys
 
 import grpc
 
-from skywalking.proto.common.trace_common_pb2 import UpstreamSegment
-from skywalking.proto.language_agent_v2.trace_pb2 import SegmentObject
-from skywalking.proto.language_agent_v2.trace_pb2_grpc import TraceSegmentReportServiceStub
+from python2sky.proto.common.trace_common_pb2 import UpstreamSegment
+from python2sky.proto.language_agent_v2.trace_pb2 import SegmentObject
+from python2sky.proto.language_agent_v2.trace_pb2_grpc import TraceSegmentReportServiceStub
 from tests.base_test_case import BaseTestCase
 
 
 class Trace_segment_client(BaseTestCase):
     def test(self):
 
-        py = "ChEKDxLl3fWSni7W8fSNppOcHBI3ChEKDxLl3fWSni6A2/KNppOcHBIeCAEQ////////////ARjl3fWSni4g5d31kp4uOgEvGAMgEg=="
+        py = "ChEKDy7e5MGeni75mdHzr5qcHBLMAQoRCg8u3+TBnp4unobR86+anBwSsgEQ////////////ARjf5MGeni4g+eTBnp4uKkEIARIRCg8u3uTBnp4utqXQ86+anBw4LkITL2ZsYXNrL2Nyb3NzX3RocmVhZFITL2ZsYXNrL2Nyb3NzX3RocmVhZDoYL2ZsYXNrL2Nyb3NzX3RocmVhZC9leGl0Sh9odHRwOi8vbG9jYWxob3N0OjgwODgvcHJvamVjdC9iUAFYA2DyLnoSCgtzdGF0dXNfY29kZRIDMjAwGAMgLg=="
 
         java = "CgwKCiA8k9qD3eKFnBwSbwoMCgogPJLag93ihZwcElsQ////////////ARjhhOH8nS4g44Th/J0uMARYA2AOeiYKA3VybBIfaHR0cDovLzEyNy4wLjAuMTo4MDg4L3Byb2plY3QvYnoSCgtodHRwLm1ldGhvZBIDR0VUGAUgIA=="
         py_up_seg = UpstreamSegment()

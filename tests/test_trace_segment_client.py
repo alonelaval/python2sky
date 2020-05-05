@@ -2,12 +2,12 @@
 # author：huawei
 import time
 
-from skywalking import config
-from skywalking.context.context_carrier import ContextCarrier
-from skywalking.context.context_manager import ContextManager
-from skywalking.remote.service_register_client import get_service_register
-from skywalking.remote.trace_segment_client import get_trace_segment_client
-from skywalking.util.uuid_util import global_id_to_string
+from python2sky import config
+from python2sky.context.context_carrier import ContextCarrier
+from python2sky.context.context_manager import ContextManager
+from python2sky.remote.service_register_client import get_service_register
+from python2sky.remote.trace_segment_client import get_trace_segment_client
+from python2sky.util.uuid_util import global_id_to_string
 from tests.base_test_case import BaseTestCase
 
 

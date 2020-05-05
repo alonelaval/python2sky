@@ -3,12 +3,12 @@
 import logging
 import threading
 
-from skywalking import config
-from skywalking.config import OPERATION_NAME_THRESHOLD
-from skywalking.context.trace_context import IgnoredTracerContext, TracingContext
-from skywalking.exception.exceptions import SkywalkingException
-from skywalking.util import string_util
-from skywalking.util.common import null_value
+from python2sky import config
+from python2sky.config import OPERATION_NAME_THRESHOLD
+from python2sky.context.trace_context import IgnoredTracerContext, TracingContext
+from python2sky.exception.exceptions import SkywalkingException
+from python2sky.util import string_util
+from python2sky.util.common import null_value
 
 log = logging.Logger(__name__)
 

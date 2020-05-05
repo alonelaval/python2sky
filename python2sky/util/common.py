@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
-from skywalking.proto.common.common_pb2 import KeyStringValuePair
-from skywalking.proto.common.trace_common_pb2 import UniqueId
+from python2sky.proto.common.common_pb2 import KeyStringValuePair
+from python2sky.proto.common.trace_common_pb2 import UniqueId
 
 
 def build_key_value(key, value):

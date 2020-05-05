@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/skywalking-client-python.iml" filepath="$PROJECT_DIR$/skywalking-client-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/python2sky.iml" filepath="$PROJECT_DIR$/python2sky.iml" />
     </modules>
   </component>
 </project>

@@ -6,7 +6,7 @@ import threading
 import time
 import uuid
 
-from skywalking.util.date_util import current_milli_time
+from python2sky.util.date_util import current_milli_time
 
 
 def get_uuid():

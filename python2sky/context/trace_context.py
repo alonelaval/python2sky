@@ -2,15 +2,15 @@
 # author：huawei
 import threading
 
-from skywalking.context.context_carrier import ContextCarrier
-from skywalking.context.noop_span import NoopSpan
-from skywalking.context.span import Span
-from skywalking.context.trace_segment import TraceSegment
-from skywalking.exception.exceptions import SkywalkingException
-from skywalking.proto.common.trace_common_pb2 import Entry, Local, Exit, RefType, CrossProcess, CrossThread
-from skywalking.util.common import null_value
-from skywalking.util.string_util import is_empty
-from skywalking.util.uuid_util import global_id_to_string
+from python2sky.context.context_carrier import ContextCarrier
+from python2sky.context.noop_span import NoopSpan
+from python2sky.context.span import Span
+from python2sky.context.trace_segment import TraceSegment
+from python2sky.exception.exceptions import SkywalkingException
+from python2sky.proto.common.trace_common_pb2 import Entry, Local, Exit, RefType, CrossProcess, CrossThread
+from python2sky.util.common import null_value
+from python2sky.util.string_util import is_empty
+from python2sky.util.uuid_util import global_id_to_string
 
 INEXISTENCE = -1
 
@@ -152,6 +152,8 @@ class TracingContext(AbstractTracerContext):
         else:
             context_carrier.parent_endpoint_id = parent_operation_id
 
+        context_carrier.parent_service_instance_id = self.segment.application_instance_id
+
         return context_carrier
 
     def continued(self, context_carrier):
@@ -260,10 +262,6 @@ class TracingContext(AbstractTracerContext):
     def finish(self):
         if len(self.spans) == 0:
             ListenerManager.notify_finish(self.segment)
-            print("finish")
-            return
-
-        print("not finish!")
 
 
 class IgnoredTracerContext(AbstractTracerContext):
