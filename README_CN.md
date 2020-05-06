@@ -1,39 +1,38 @@
 ## python2sky 
 
-Python2sky is a Skywalking client written in Python, following the[Apache SkyWalking](https://github.com/apache/incubator-skywalking) tracing formats. Protocol v2 is currently supproted.
+python2sky 是一个python 语言的 skywalking 的客户端，遵循了  [Apache SkyWalking](https://github.com/apache/incubator-skywalking)  的tracing标准格式，现阶段支持的服务端版本为v2的协议。
 
-### Installation
+### 安装：
 
 ```
   pip install python2sky
 ```
 
-This project is new and further improvements are on the way. All testing is performed and passed against Skywalking 6.6.
+该项目时间很短，后续会继续改进，在skywalking服务端版本为6.6的时候测试通过。
 
-##  Quickstart
+##  快速入门：
+在测试 agent 的时候，使用了 flask，手动埋点的方式，后续会改进成自动埋点，请查看[样例](https://github.com/alonelaval/python2sky/blob/master/tests/falsk_test/test_flask.py) 
 
-To test this agent, flask is used with manual event-tracking, which will eventually be iterated to automatic event-tracing in the near future. Please follow the [example](https://github.com/alonelaval/python2sky/blob/master/tests/falsk_test/test_flask.py).
-
-### Configurations
-#### Set Backend Address
+### 配置 
+#### 服务端地址
 ```
 from python2sky import config
 config.BACKEND_SERVICE = "127.0.0.1:11800"
 
 ```
-#### Set Service Name
+#### 服务名称
 ```
 from python2sky import config
 config.SERVICE_NAME = "python-test"
 
 ```
-#### Start Registration and Data Collecting
+#### 启动注册和收集数据
 ```
 from python2sky.bootstrap import skywalking_boot
 skywalking_boot()
 
 ```
-#### Create Spans
+#### 创建 span
 ```
 from python2sky.context.context_carrier import ContextCarrier
 from python2sky.context.context_manager import ContextManager
@@ -50,19 +49,19 @@ exit_url = "www.google.com"
 local_span = ContextManager.create_local_span("/locahost_span")
 exit_span = ContextManager.create_exit_span("/exit_span", exit_url)
 ```
-#### Get Current Global TarceId
+#### 获取当前 tarceId
 ```
 ContextManager.get_global_trace_id()
 ```
-#### Stop Spans
-Only after spans are stopped will they be sent to the backend.
+#### 结束 span
+只有 span被 结束，才会被发送到后端服务器。
 
 ```
 ContextManager.stop_span(exit_span)
 ContextManager.stop_span(local_span)
 ContextManager.stop_span(entry_span)
 ```
-#### Cross Process Propagation
+#### 多进程传播
 ```
 @app.route('/flask/cross_process')
 def cross_process():
@@ -93,7 +92,7 @@ def cross_process():
 
 ```
 
-#### Cross Thread Propagation
+#### 多线程传播
 ```
 @app.route('/flask/cross_thread')
 def cross_thread():
@@ -132,11 +131,11 @@ def cross_thread():
     ContextManager.stop_span(entry_span)
 ```
 
-#### Testing on Java Project
+#### 测试java项目
 [java](https://github.com/alonelaval/python2sky-agent-java-test) 
 
-#### Add Python Components to Skywalking Backend
-In **component-libraries.yml**:
+#### skywalking 服务端添加 python 组件
+在 **component-libraries.yml** 添加：
 
 ```
 # python components

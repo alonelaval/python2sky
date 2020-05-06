@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae6d4b-9939-4455-bd9d-242688646a0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/python2sky-0.1.3.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python2sky/context/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python2sky/proto/language-agent/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python2sky/proto/register/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/istio/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/python2sky-0.1.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/python2sky-0.1.1.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +222,9 @@
       <workItem from="1588422862983" duration="45257000" />
       <workItem from="1588558518298" duration="34456000" />
       <workItem from="1588599699983" duration="21747000" />
-      <workItem from="1588668307724" duration="8504000" />
+      <workItem from="1588668307724" duration="9243000" />
+      <workItem from="1588678589987" duration="696000" />
+      <workItem from="1588679779310" duration="140000" />
     </task>
     <servers />
   </component>
@@ -274,22 +268,22 @@
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
     <state x="1085" y="558" key="EnvironmentVariablesDialog/0.0.2511.1440@0.0.2511.1440" timestamp="1588598264763" />
-    <state width="1540" height="281" key="GridCell.Tab.0.bottom" timestamp="1588668796125">
+    <state width="1540" height="281" key="GridCell.Tab.0.bottom" timestamp="1588678420252">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588668796125" />
-    <state width="1540" height="281" key="GridCell.Tab.0.center" timestamp="1588668796124">
+    <state width="1540" height="281" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
+    <state width="1540" height="281" key="GridCell.Tab.0.center" timestamp="1588678420252">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588668796124" />
-    <state width="1540" height="281" key="GridCell.Tab.0.left" timestamp="1588668796123">
+    <state width="1540" height="281" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
+    <state width="1540" height="281" key="GridCell.Tab.0.left" timestamp="1588678420251">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588668796123" />
-    <state width="1540" height="281" key="GridCell.Tab.0.right" timestamp="1588668796124">
+    <state width="1540" height="281" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420251" />
+    <state width="1540" height="281" key="GridCell.Tab.0.right" timestamp="1588678420252">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588668796124" />
+    <state width="1540" height="281" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
     <state width="1346" height="366" key="GridCell.Tab.1.bottom" timestamp="1588668247723">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
