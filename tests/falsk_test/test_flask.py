@@ -103,4 +103,15 @@ def cross_thread():
     return 'cross_thread'
 
 
+
+@app.before_request
+def before_request():
+    req = request
+
+
+@app.after_request
+def after_request():
+    req = request
+
+
 app.run()

@@ -127,7 +127,7 @@ class ContextManager:
 
     @classmethod
     def get_tracing_context(cls):
-        if hasattr(ContextManager.CONTEXT,"trace_context"):
+        if hasattr(ContextManager.CONTEXT, "trace_context"):
             return ContextManager.CONTEXT.trace_context
         return None
 

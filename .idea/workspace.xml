@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67ae6d4b-9939-4455-bd9d-242688646a0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python2sky/plugin/flask_plugin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python2sky/plugin/trace_plugin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/falsk_test/test_flask_plugin_filter_trace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/falsk_test/test_flask_plugin_trace.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python2sky/context/context_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/python2sky/context/context_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/falsk_test/test_flask.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +44,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/python2sky/context" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/falsk_test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -48,19 +53,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/python2sky/context" />
-      <recent name="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/istio" />
-      <recent name="$PROJECT_DIR$/python2sky/proto/service-mesh-probe" />
-      <recent name="$PROJECT_DIR$/python2sky/proto/register" />
-      <recent name="$PROJECT_DIR$/python2sky/proto/language-agent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/skywalking/proto/common" />
       <recent name="$PROJECT_DIR$/skywalking/proto/language_agent_v2" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/falsk_test" />
+      <recent name="$PROJECT_DIR$/python2sky/context" />
+      <recent name="$PROJECT_DIR$/python2sky/proto/service-mesh-probe/istio" />
+      <recent name="$PROJECT_DIR$/python2sky/proto/service-mesh-probe" />
+      <recent name="$PROJECT_DIR$/python2sky/proto/register" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.test_flask">
+  <component name="RunManager" selected="Python.test_flask_plugin_trace">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -125,6 +130,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_flask_plugin_filter_trace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python2sky" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/falsk_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/falsk_test/test_flask_plugin_filter_trace.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_flask_plugin_trace" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python2sky" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/falsk_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/falsk_test/test_flask_plugin_trace.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -142,36 +191,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Unittests for test_trace_segment_client.Trace_segment_client.test_send" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_trace_segment_client.Trace_segment_client.test_send&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_upstream_segment.Trace_segment_client" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="python2sky" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_upstream_segment.Trace_segment_client&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
     </configuration>
     <configuration name="Unittests for test_upstream_segment.Trace_segment_client.test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="python2sky" />
@@ -192,17 +211,17 @@
     <list>
       <item itemvalue="Python.test_flask" />
       <item itemvalue="Python.bootstrap" />
-      <item itemvalue="Python tests.Unittests for test_trace_segment_client.Trace_segment_client.test_send" />
       <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client.test" />
-      <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client" />
+      <item itemvalue="Python.test_flask_plugin_filter_trace" />
+      <item itemvalue="Python.test_flask_plugin_trace" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_flask_plugin_trace" />
+        <item itemvalue="Python.test_flask_plugin_filter_trace" />
         <item itemvalue="Python.test_flask" />
         <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client.test" />
         <item itemvalue="Python.bootstrap" />
-        <item itemvalue="Python tests.Unittests for test_upstream_segment.Trace_segment_client" />
-        <item itemvalue="Python tests.Unittests for test_trace_segment_client.Trace_segment_client.test_send" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +244,9 @@
       <workItem from="1588668307724" duration="9243000" />
       <workItem from="1588678589987" duration="696000" />
       <workItem from="1588679779310" duration="140000" />
+      <workItem from="1588766613729" duration="501000" />
+      <workItem from="1588858524918" duration="1820000" />
+      <workItem from="1589117004483" duration="3786000" />
     </task>
     <servers />
   </component>
@@ -268,38 +290,38 @@
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
     <state x="1085" y="558" key="EnvironmentVariablesDialog/0.0.2511.1440@0.0.2511.1440" timestamp="1588598264763" />
-    <state width="1540" height="281" key="GridCell.Tab.0.bottom" timestamp="1588678420252">
+    <state width="1853" height="366" key="GridCell.Tab.0.bottom" timestamp="1589122127290">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
-    <state width="1540" height="281" key="GridCell.Tab.0.center" timestamp="1588678420252">
+    <state width="1853" height="366" key="GridCell.Tab.0.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127290" />
+    <state width="1853" height="366" key="GridCell.Tab.0.center" timestamp="1589122127289">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
-    <state width="1540" height="281" key="GridCell.Tab.0.left" timestamp="1588678420251">
+    <state width="1853" height="366" key="GridCell.Tab.0.center/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127289" />
+    <state width="1853" height="366" key="GridCell.Tab.0.left" timestamp="1589122127289">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420251" />
-    <state width="1540" height="281" key="GridCell.Tab.0.right" timestamp="1588678420252">
+    <state width="1853" height="366" key="GridCell.Tab.0.left/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127289" />
+    <state width="1853" height="366" key="GridCell.Tab.0.right" timestamp="1589122127290">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1540" height="281" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588678420252" />
-    <state width="1346" height="366" key="GridCell.Tab.1.bottom" timestamp="1588668247723">
+    <state width="1853" height="366" key="GridCell.Tab.0.right/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127290" />
+    <state width="1853" height="366" key="GridCell.Tab.1.bottom" timestamp="1589122127222">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1346" height="366" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
-    <state width="1346" height="366" key="GridCell.Tab.1.center" timestamp="1588668247723">
+    <state width="1853" height="366" key="GridCell.Tab.1.bottom/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127222" />
+    <state width="1853" height="366" key="GridCell.Tab.1.center" timestamp="1589122127221">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1346" height="366" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
-    <state width="1346" height="366" key="GridCell.Tab.1.left" timestamp="1588668247722">
+    <state width="1853" height="366" key="GridCell.Tab.1.center/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127221" />
+    <state width="1853" height="366" key="GridCell.Tab.1.left" timestamp="1589122127221">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1346" height="366" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247722" />
-    <state width="1346" height="366" key="GridCell.Tab.1.right" timestamp="1588668247723">
+    <state width="1853" height="366" key="GridCell.Tab.1.left/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127221" />
+    <state width="1853" height="366" key="GridCell.Tab.1.right" timestamp="1589122127222">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
-    <state width="1346" height="366" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1588668247723" />
+    <state width="1853" height="366" key="GridCell.Tab.1.right/0.0.2511.1440@0.0.2511.1440" timestamp="1589122127222" />
     <state x="818" y="368" key="SettingsEditor" timestamp="1588336174537">
       <screen x="0" y="0" width="2511" height="1440" />
     </state>
@@ -364,9 +386,11 @@
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_in_test_context_carrier_py.coverage" NAME="Unittests in test_context_carrier.py Coverage Results" MODIFIED="1588565593253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_segment_TestTrace_segment_test_span.coverage" NAME="Unittests for test_segment.TestTrace_segment.test_span Coverage Results" MODIFIED="1588501034558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_segment_TestTraceSegment_test_sync_segment.coverage" NAME="Unittests for test_segment.TestTraceSegment.test_sync_segment Coverage Results" MODIFIED="1588504382482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/python2sky$test_flask_plugin_filter_trace.coverage" NAME="test_flask_plugin_filter_trace Coverage Results" MODIFIED="1589121939202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/falsk_test" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_threadlocal_TestTreadLocal.coverage" NAME="Unittests for test_threadlocal.TestTreadLocal Coverage Results" MODIFIED="1588498594519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_in_test_tracing_context_py.coverage" NAME="Unittests in test_tracing_context.py Coverage Results" MODIFIED="1588505129429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_span_TestSpan_test_span.coverage" NAME="Unittests for test_span.TestSpan.test_span Coverage Results" MODIFIED="1588501146710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/python2sky$test_flask_plugin_trace.coverage" NAME="test_flask_plugin_trace Coverage Results" MODIFIED="1589122127190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/falsk_test" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$date_util.coverage" NAME="date_util Coverage Results" MODIFIED="1588345904625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/skywalking/util" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_config_TestConfig_testConfig.coverage" NAME="Unittests for test_config.TestConfig.testConfig Coverage Results" MODIFIED="1588487755817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/skywalking_client_python$Unittests_for_test_tracing_context_TestTracingContext_test_ignored_segment.coverage" NAME="Unittests for test_tracing_context.TestTracingContext.test_ignored_segment Coverage Results" MODIFIED="1588505372095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
