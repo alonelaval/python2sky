@@ -11,7 +11,8 @@ from python2sky.config import SKYWALKING_HERADER_V2
 from python2sky.context.common import set_layer_http, set_component, REQUESTS, set_tag_status_code
 from python2sky.context.context_carrier import ContextCarrier
 from python2sky.context.context_manager import ContextManager
-from python2sky.plugin.flask_plugin import trace_request_started, trace_request_finished
+from python2sky.plugin.flask_plugin import trace_request_started, flask_install
+
 config.SERVICE_NAME= "flask_test_trace"
 skywalking_boot()
 
@@ -25,6 +26,7 @@ def test():
 
 @app.route('/flask/test')
 def hello_world():
+    raise BaseException("exception")
     return 'Hello, World!'
 
 
@@ -41,8 +43,6 @@ def cross_process():
     ContextManager.stop_span(exit_span)
     return "cross_process"
 
+flask_install(app)
 
-request_started.connect(trace_request_started, app)
-request_finished.connect(trace_request_finished, app)
-
-app.run()
+app.run(threaded=True)

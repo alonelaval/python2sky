@@ -38,10 +38,10 @@ class RegisterClient(threading.Thread):
     def run(self):
         while True:
             try:
-                if not self.service_id:
+                if self.service_id is None:
                     service_register_mapping = self.register_service()
                     self.set_service_id(service_register_mapping)
-                elif not self.service_instance_id:
+                elif self.service_instance_id is None:
                     service_instance_register_mapping = self.register_instance(self.service_id, self.uuid)
                     self.set_service_instance_id(service_instance_register_mapping)
                 else:
