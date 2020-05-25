@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
 import traceback
+from abc import ABC
 
 from python2sky.proto.common.trace_common_pb2 import Entry, Exit
 from python2sky.util.common import build_key_value, null_value
@@ -9,8 +10,7 @@ from python2sky.util.date_util import current_milli_time
 from python2sky.util.string_util import is_empty
 
 
-
-class Span:
+class Span(ABC):
     def __init__(self):
         self.span_id = -1
         self.parent_span_id = None

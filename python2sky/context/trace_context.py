@@ -264,8 +264,7 @@ class TracingContext(AbstractTracerContext):
             ListenerManager.notify_finish(self.segment)
 
 
-class IgnoredTracerContext(AbstractTracerContext):
-    pass
+
 
 
 class ListenerManager:

@@ -94,6 +94,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="haha.models.admin" />
+          <option value="python2sky.context.IgnoredTracerContext.__noop_span" />
         </list>
       </option>
     </inspection_tool>
