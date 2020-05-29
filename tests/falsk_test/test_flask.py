@@ -1,9 +1,15 @@
 # -*- coding:utf-8 -*-
 # author：huawei
+import logging
 from threading import Thread
 
 import requests
 from flask import Flask, request
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT)
+
+logger = logging.getLogger("python2sky")
+
 
 from python2sky.bootstrap import skywalking_boot
 from python2sky.config import SKYWALKING_HERADER_V2
@@ -104,14 +110,6 @@ def cross_thread():
 
 
 
-@app.before_request
-def before_request():
-    req = request
 
 
-@app.after_request
-def after_request():
-    req = request
-
-
-app.run()
+app.run(threaded=True)

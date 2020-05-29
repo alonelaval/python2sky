@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
+import logging
+
 import requests
 from flask import Flask, request
 
@@ -10,6 +12,11 @@ from python2sky.context.common import set_layer_http, set_component, REQUESTS, s
 from python2sky.context.context_carrier import ContextCarrier
 
 from python2sky.plugin.flask_plugin import trace_flask_request
+
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT)
+
+logger = logging.getLogger("python2sky")
 
 config.SERVICE_NAME= "flask_test_trace"
 skywalking_boot()
@@ -52,4 +59,4 @@ def cross_thread():
 
 
 
-app.run()
+app.run(threaded=True)

@@ -8,6 +8,7 @@ from tests.base_test_case import BaseTestCase
 class TestContextCarrier(BaseTestCase):
 
     def test_serialize(self):
+        print(self.context_carrier.serialize())
         self.assertEqual(self.SW6, self.context_carrier.serialize())
 
     def test_deserialize(self):

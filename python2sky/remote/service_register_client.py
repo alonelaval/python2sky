@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 # author：huawei
 import threading
-import time
+
 import grpc
 
 from python2sky import config
@@ -15,14 +15,13 @@ from python2sky.util.uuid_util import get_uuid
 from python2sky.util.common import build_key_value
 import logging
 
-
 log = logging.getLogger(__name__)
 
 
 class RegisterClient(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
-
+        self.__finished = threading.Event()
         self.service_name = config.SERVICE_NAME
         self.agent_version = config.AGENT_VERSION
         self.server = config.BACKEND_SERVICE
@@ -36,7 +35,7 @@ class RegisterClient(threading.Thread):
         self.start()
 
     def run(self):
-        while True:
+        while not self.__finished.is_set():
             try:
                 if self.service_id is None:
                     service_register_mapping = self.register_service()
@@ -46,11 +45,12 @@ class RegisterClient(threading.Thread):
                     self.set_service_instance_id(service_instance_register_mapping)
                 else:
                     self.instance_ping(self.service_instance_id, self.uuid)
-                time.sleep(config.REGISTER_INTERVAL)
+
+                self.__finished.wait(config.REGISTER_INTERVAL)
             except Exception as e:
-                log.exception("register execute fail will be Selected collector grpc service running, reconnect:{}."
-                              , self.server, e)
-                time.sleep(config.REGISTER_INTERVAL)
+                log.error(
+                    "register execute fail will be Selected collector grpc service running, reconnect: %s ." % self.server)
+                self.__finished.wait(config.REGISTER_INTERVAL)
                 self.connection()
 
     def connection(self):
@@ -60,7 +60,7 @@ class RegisterClient(threading.Thread):
             self.register_stub = RegisterStub(self.channel)
             self.ping_stub = ServiceInstancePingStub(self.channel)
         except Exception as e:
-            log.exception("Create channel to {} fail.", self.server, e)
+            log.error("Create channel to %s fail." % self.server)
 
     def set_service_instance_id(self, service_instance_register_mapping):
         if service_instance_register_mapping and len(service_instance_register_mapping.serviceInstances) > 0:

@@ -1,19 +1,23 @@
 # -*- coding:utf-8 -*-
 # author：huawei
+import logging
+
 import requests
 from flask import Flask, request, request_finished, config
 
 from python2sky.bootstrap import skywalking_boot
 
-from flask import request_started
+LOG_FORMAT = "%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT)
 
+logger = logging.getLogger("python2sky")
 from python2sky.config import SKYWALKING_HERADER_V2
 from python2sky.context.common import set_layer_http, set_component, REQUESTS, set_tag_status_code
 from python2sky.context.context_carrier import ContextCarrier
 from python2sky.context.context_manager import ContextManager
 from python2sky.plugin.flask_plugin import trace_request_started, flask_install
 
-config.SERVICE_NAME= "flask_test_trace"
+config.SERVICE_NAME = "flask_test_trace"
 skywalking_boot()
 
 app = Flask(__name__)

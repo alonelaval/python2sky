@@ -3,9 +3,10 @@
 import logging
 import threading
 
+from python2sky.context.IgnoredTracerContext import IgnoredTracerContext
 from python2sky import config
 from python2sky.config import OPERATION_NAME_THRESHOLD
-from python2sky.context.trace_context import IgnoredTracerContext, TracingContext
+from python2sky.context.trace_context import TracingContext
 from python2sky.exception.exceptions import SkywalkingException
 from python2sky.util import string_util
 from python2sky.util.common import null_value
@@ -39,6 +40,7 @@ class ContextManager:
         else:
             tracing_context = ContextManager.CONTEXT.trace_context
         ContextManager.CONTEXT.trace_context = tracing_context
+
         return tracing_context
 
     @classmethod
@@ -140,7 +142,7 @@ class ContextManager:
     @classmethod
     def create_trace_context(cls, operation_name, force_sampling):
         suffix_idx = operation_name.rfind(".")
-        if suffix_idx > -1 and operation_name.rfind(".") in config.IGNORE_SUFFIX:
+        if suffix_idx > -1 and operation_name[operation_name.rfind(".")+1:] in config.IGNORE_SUFFIX:
             context = IgnoredTracerContext()
         else:
             if force_sampling:

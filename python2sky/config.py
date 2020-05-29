@@ -10,7 +10,7 @@ SERVICE_NAME = "python-test"
 
 SERVICE_INSTANCE_ID = 0
 
-IGNORE_SUFFIX = []
+IGNORE_SUFFIX = ["ico", "css", "jpg", "js"]
 
 OPERATION_NAME_THRESHOLD = 500
 

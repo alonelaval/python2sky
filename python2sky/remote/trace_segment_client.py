@@ -17,6 +17,7 @@ log = logging.getLogger(__name__)
 class TraceSegmentClient(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
+        self.__finished = threading.Event()
         self.q = Queue()
         self.server = config.BACKEND_SERVICE
         self.service_id = config.SERVICE_ID
@@ -25,26 +26,26 @@ class TraceSegmentClient(threading.Thread):
         self.register_stub = None
         self.trace_segment_stub = None
         ListenerManager.add(self)
-        self.connect_status = False
+        self.state = ""
         self.connection()
         self.start()
 
     def run(self):
-        while True:
+        while not self.__finished.is_set():
             try:
-                if not self.connect_status:
+                if not self.connected():
                     self.connection()
-                trace_segment = self.q.get()
 
                 def iter_data():
-                    for seg in [trace_segment]:
-                        yield seg.transform()
+                    trace_segment = self.q.get()
+                    yield trace_segment.transform()
+                    self.q.task_done()
 
                 self.trace_segment_stub.collect(iter_data())
 
             except Exception as e:
-                log.exception("Transform and send UpstreamSegment to collector fail.{}.", self.server, e)
-                time.sleep(config.REGISTER_INTERVAL)
+                log.error("Transform and send UpstreamSegment to collector fail.%s." % self.server)
+                self.__finished.wait(config.REGISTER_INTERVAL)
                 self.channel.close()
                 self.connection()
 
@@ -52,14 +53,17 @@ class TraceSegmentClient(threading.Thread):
         try:
             self.channel = grpc.insecure_channel(self.server)
             self.trace_segment_stub = TraceSegmentReportServiceStub(self.channel)
-            self.connect_status = True
+            self.state = grpc.ChannelConnectivity.READY
         except Exception as e:
             self.channel.close()
-            self.connect_status = False
-            log.exception("Create channel to {} fail.", self.server, e)
+            self.state = grpc.ChannelConnectivity.SHUTDOWN
+            log.error("Create channel to %s fail." % self.server)
 
     def after_finished(self, trace_segment):
         self.q.put(trace_segment)
+
+    def connected(self):
+        return self.state == grpc.ChannelConnectivity.READY
 
 
 __trace_segment_client = TraceSegmentClient()

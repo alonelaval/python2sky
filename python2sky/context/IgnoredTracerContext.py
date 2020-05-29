@@ -30,23 +30,23 @@ class IgnoredTracerContext(AbstractTracerContext):
 
     def create_entry_span(self, operation_name):
         self.stack_depth += 1
-        return __noop_span
+        return IgnoredTracerContext.__noop_span
 
     def create_local_span(self, operation_name):
         self.stack_depth += 1
-        return __noop_span
+        return IgnoredTracerContext.__noop_span
 
     def create_exit_span(self, operation_name, remote_peer):
         self.stack_depth += 1
-        return __noop_span
+        return IgnoredTracerContext.__noop_span
 
     def active_span(self):
-        return __noop_span
+        return IgnoredTracerContext.__noop_span
 
     def stop_span(self, span):
         self.stack_depth -= 1
         if self.stack_depth == 0:
-            IgnoredListenerManager.notifyFinish(self)
+            IgnoredListenerManager.notify_finish(self)
 
     def await_finish_async(self):
         pass
