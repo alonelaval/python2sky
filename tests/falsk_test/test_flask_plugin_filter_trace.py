@@ -47,6 +47,7 @@ def cross_process():
     ContextManager.stop_span(exit_span)
     return "cross_process"
 
+
 flask_install(app)
 
-app.run(threaded=True)
+app.run(debug=True, threaded=True)

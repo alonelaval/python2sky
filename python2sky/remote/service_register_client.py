@@ -103,6 +103,8 @@ class RegisterClient(threading.Thread):
         ping.serviceInstanceId = instance_id
         ping.time = current_milli_time()
         ping.serviceInstanceUUID = instance_uuid
+        config.SERVICE_ID = self.service_id
+        config.SERVICE_INSTANCE_ID = self.service_instance_id
         return self.ping_stub.doPing(ping)
 
 

@@ -5,17 +5,14 @@ import unittest
 from tests.base_test_case import BaseTestCase
 
 
-class TestSuffix(unittest.TestCase):
+class TestSuffix(BaseTestCase):
 
     def test_t4e(self):
         op = "/favicon.ico"
         print(op[op.rfind("."):len(op)])
 
-        self.assertEqual(op[op.rfind("."):len(op)], "ico")
+        self.assertEqual(op[op.rfind(".")+1:], "ico")
 
 
 
 
-if __name__ == "__main__":
-    op = "/favicon.ico"
-    print(op[op.rfind(".")+1:])
