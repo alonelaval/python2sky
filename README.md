@@ -131,6 +131,20 @@ def cross_thread():
 
     ContextManager.stop_span(entry_span)
 ```
+#### auto-instrument agents.
+```
+flask_install(app)
+urllib_install()
+urllib3_install()
+requests_install()
+
+```
+#### function trace
+```
+@trace()
+def test_trace(v1, v2):
+    return v1 + v2
+```
 
 #### Testing on Java Project
 [java](https://github.com/alonelaval/python2sky-agent-java-test) 

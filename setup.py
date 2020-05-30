@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name="python2sky",
-    version="0.2.1",
+    version="0.2.2",
     keywords=("skywalking", "agent", "skywalking aget", "apm", "trace", "distributed trace"),
     description="skywalking agent for python",
     long_description="apm agent",
